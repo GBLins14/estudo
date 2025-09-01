@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo da Bruninha</title>
+
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Baloo+Bhai+2:wght@400..800&family=Happy+Monkey&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="perfil">
+                <img src="/img/user-img.png" alt="Foto de perfil">
+                <div class="infos-user">
+                    <span id="nomeUsuario">Bruna Manuela</span><br>
+                    <span id="nivel">Nível: 0</span><br>
+                </div>
+            </div>
+            <h1>ESTUDO DA BRUNINHA</h1>
+        </header>
+
+        <div class="conteudo">
+            <div>
+                <select id="materia">
+                    <option>Matemática</option>
+                    <option>Português</option>
+                    <option>Ciências</option>
+                    <option>Biologia</option>
+                    <option>Química</option>
+                    <option>Física</option>
+                    <option>História</option>
+                    <option>Geografia</option>
+                    <option>Arte</option>
+                    <option>Educação Física</option>
+                    <option>Inglês</option>
+                    <option>Redação</option>
+                    <option>Gramática</option>
+                </select>
+                <br><br>
+                <select id="modo-explicacao">
+                    <option value="simples">Explicação bem simples (para iniciantes ou “como se fosse um demente”)
+                    </option>
+                    <option value="normal">Explicação normal (nível estudante médio)</option>
+                    <option value="detalhada">Explicação detalhada (passo a passo, mais completa)</option>
+                    <option value="profissional">Explicação profissional (como professor ou especialista)</option>
+                    <option value="criativa">Explicação criativa/divertida (exemplos lúdicos, metáforas)</option>
+                </select>
+                <br><br>
+                <button class="pr_button" id="meuBotao">Perguntas e respostas</button>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" class="box"
+                    placeholder="Assuntos da matéria, por exemplo: equação do 2º grau, frações." id="assuntosInput">
+            </div>
+            <button class="pr_button" id="simuladorBotao">Simulador de prova</button>
+
+            <div class="gata-container">
+                <img src="/img/gatinha.png" alt="gatinhamarrie" class="gatinhamarrie">
+            </div>
+
+            <div class="preview-container">
+                <div class="chat-preview"></div>
+            </div>
+
+            <div class="chat-container">
+                <div class="input-wrapper">
+                    <input type="text" class="chat"
+                        placeholder="IA da Bruninha, tire suas duvidas, faça perguntas, peça revisões, etc...">
+                    <img src="/img/icon_send.png" alt="Enviar" class="send-icon">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

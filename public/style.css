@@ -1,0 +1,258 @@
+* {
+    font-family: "Happy Monkey", system-ui;
+}
+
+body {
+    margin: 0;
+    font-weight: 400;
+    font-style: normal;
+    background: #f8f8f8;
+}
+
+.gatinhamarrie {
+    position: fixed;
+    width: 10%;
+    left: 50%;
+    transform: translateX(-230%);
+    bottom: 25.2vw;
+    /* para 1920x1080, fica logo acima do .preview-container */
+    z-index: 10;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #FFA2D0, #FF81C0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #FF70B7;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.perfil img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+header h1 {
+    font-family: "Baloo Bhai 2", sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+}
+
+.input-wrapper {
+    position: relative;
+    /* container relativo para posicionamento absoluto */
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    width: 40vw;
+    height: 1.5vw;
+    padding: 8px 40px 8px 10px;
+    /* espaço extra à direita para o ícone */
+    border-radius: 8px;
+    border: 1px solid #FF70B7;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #FF70B7;
+    font-size: 13px;
+    color: white;
+}
+
+.box::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+.box:focus {
+    outline: none;
+}
+
+.send-icon {
+    position: absolute;
+    /* posiciona dentro do input */
+    right: 10px;
+    /* distância da borda direita */
+    top: 50%;
+    /* centraliza verticalmente */
+    transform: translateY(-50%);
+    width: 25px;
+    /* ajuste do tamanho do ícone */
+    height: 25px;
+    cursor: pointer;
+}
+
+.send-icon:hover {
+    filter: brightness(0.9);
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+}
+
+select {
+    padding: 8px 10px;
+    width: 10vw;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #FF70B7;
+    color: white;
+
+    /* Remover a seta padrão */
+    -webkit-appearance: none;
+    /* Chrome, Safari, Edge */
+    -moz-appearance: none;
+    /* Firefox */
+    appearance: none;
+
+    /* Adicionar seta customizada */
+    background-image: url('assets/img/arrow_down.png');
+    /* ou use SVG ou data-uri */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 13px 7px;
+}
+
+select:not(:focus):hover {
+    background-color: #FF4FA2;
+    cursor: pointer;
+}
+
+/* Remove o outline no foco */
+select:focus {
+    outline: none;
+    background-color: #FF70B7; /* mantém a cor padrão enquanto está focado */
+}
+
+.preview-container {
+    position: fixed;
+    bottom: 3.5vw;
+    /* fixa na parte inferior */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-preview {
+    width: 75vw;
+    height: 20vw;
+    padding: 8px 40px 10px 10px;
+    border-radius: 8px;
+    border: 1px solid #FF007E;
+    background: linear-gradient(to right, #FF70B7, #FF97CA, #FF70B7);
+    font-size: 13px;
+    color: white;
+    overflow-y: auto;
+    /* rolagem */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* bolha genérica */
+.chat-bubble {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    font-size: 14px;
+    white-space: pre-wrap; /* 👈 Respeita \n e mantém leitura melhor */
+}
+
+/* bolha do usuário */
+.chat-bubble.user {
+    align-self: flex-end;
+    background: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-bottom-right-radius: 0;
+}
+
+/* bolha da IA */
+.chat-bubble.ai {
+    align-self: flex-start;
+    background: #FF4FA2;
+    color: #fff;
+    border-bottom-left-radius: 0;
+}
+
+
+.chat-container {
+    position: fixed;
+    bottom: 0;
+    /* fixa na parte inferior */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.chat {
+    width: 75vw;
+    height: 1.5vw;
+    padding: 8px 40px 8px 10px;
+    /* espaço extra à direita para o ícone */
+    border-radius: 8px;
+    border: 1px solid #FF007E;
+    box-shadow: 4px 4px 15px #FF007E;
+    background: linear-gradient(to right, #FF70B7, #FF97CA, #FF70B7);
+    font-size: 13px;
+    color: white;
+}
+
+.chat::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+.chat:focus {
+    outline: none;
+}
+
+.pr_button {
+    text-decoration: none;
+    padding: 8px 10px;
+    width: 10vw;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #FF70B7;
+    color: white;
+}
+
+.pr_button:hover {
+    background-color: #FF4FA2;
+    cursor: pointer;
+}
